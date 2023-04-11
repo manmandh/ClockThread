@@ -36,8 +36,8 @@ class FacThread extends Thread{
         n=k;
     }
     public void run(){
-        for(int i=2;i<=n;i++){
-            gt+=i;
+        for(int i=1;i<=n;i++){
+            gt*=i;
         }
         System.out.println("\nF1= "+gt);
     }
