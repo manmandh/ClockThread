@@ -7,7 +7,7 @@ public class PriorityDemo extends Frame {
     private HighThread highThread;
     private LowThread lowThread;
 
-    private  TextArea output;
+    private TextArea output;
 
     public PriorityDemo(){
         super("Priority Demo");

@@ -18,6 +18,7 @@ public MultiClock(){
     clock = new JLabel(simpleDateFormat.format(calendar.getTime()),JLabel.CENTER);
     clock.setFont(new Font(clock.getFont().getName(), Font.PLAIN,40));
     clock.setForeground(Color.RED);
+    setLocationRelativeTo(null);
     container.add(createClock,"North");
     container.add(clock);
     this.pack();

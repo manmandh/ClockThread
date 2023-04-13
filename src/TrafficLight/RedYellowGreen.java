@@ -36,14 +36,14 @@ public class RedYellowGreen extends JFrame implements Runnable {
     public void run() {
         while (true) {
             redPanel.setBackground(Color.RED);
-            greenPanel.setBackground(Color.DARK_GRAY);
+            yellowPanel.setBackground(Color.YELLOW);
             try {
+                wait();
                 Thread.sleep(time);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
-            yellowPanel.setBackground(Color.YELLOW);
+            greenPanel.setBackground(Color.DARK_GRAY);
             try {
                 Thread.sleep(time);
             } catch (InterruptedException e) {
@@ -63,7 +63,7 @@ public class RedYellowGreen extends JFrame implements Runnable {
 
     public static void main(String[] args) {
         //set optional time
-        RedYellowGreen redYellowGreen = new RedYellowGreen(3000);
+        RedYellowGreen redYellowGreen = new RedYellowGreen(500);
         Thread thread = new Thread(redYellowGreen);
         thread.start();
     }
