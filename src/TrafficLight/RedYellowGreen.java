@@ -38,7 +38,7 @@ public class RedYellowGreen extends JFrame implements Runnable {
             redPanel.setBackground(Color.RED);
             yellowPanel.setBackground(Color.YELLOW);
             try {
-                wait();
+                //wait();
                 Thread.sleep(time);
             } catch (InterruptedException e) {
                 e.printStackTrace();
