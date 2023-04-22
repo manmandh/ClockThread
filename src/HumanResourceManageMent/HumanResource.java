@@ -10,7 +10,7 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.*;
 import java.io.File;
 public class HumanResource {
-    static Scanner scanner = new Scanner(System.in);
+    final static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) throws IOException {
         HumanResource humanResource = new HumanResource();
 
@@ -18,10 +18,13 @@ public class HumanResource {
         String fileXmlName = "D:\\Workspace\\Java Project\\Clock\\src\\HumanResourceManageMent\\test.xml";
         HRM hrm = new HRM("Man", 10, 4, "a");
         HRM hrm2 = new HRM("Dat", 11, 2, "b");
+        HRM hrm1 = new HRM("Hoa",9,3,"c");
+
 
         Company company =  new Company();
         company.addHRM(hrm);
         company.addHRM(hrm2);
+        company.addHRM(hrm1);
 
         ObjectOutputStream oos = null;
         oos = new ObjectOutputStream(new FileOutputStream(fileName));
@@ -61,8 +64,8 @@ public class HumanResource {
                         i.stream().forEach(System.out::println);
                         break;
                     case 2:
-                        HRM hrm1 = i.stream().max(Comparator.comparingInt(s -> s.quantity)).orElse(null);
-                        System.out.println(hrm1);
+                        HRM hrm5 = i.stream().max(Comparator.comparingInt(s -> s.quantity)).orElse(null);
+                        System.out.println(hrm5);
                         break;
                     case 3:
                         HRM hrm3 = i.stream().findFirst().orElse(null);
